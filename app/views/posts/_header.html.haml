@@ -1,0 +1,100 @@
+.header
+  .header-upper
+    .header-upper-title
+      .header-upper-title-category
+        %input#nav-input.nav-unshown{:type => "checkbox"}/
+        %label#nav-open{:for => "nav-input"}
+          %span
+        %label#nav-close.nav-unshown{:for => "nav-input"}
+        #nav-content ここに中身を入れる
+      .header-upper-title-box
+        .header-upper-title-box-main
+          = link_to root_path, class:"header-upper-title-box-main-amazon" do
+            amazon
+          .header-upper-title-box-main-domain .co.jp
+        .header-upper-title-box-sub
+          .header-upper-title-box-sub-right
+            →
+          - if user_signed_in?
+            .header-upper-title-box-sub-right-prime
+              prime
+          - else
+            = link_to new_user_registration_path, class:"header-upper-title-box-sub-prime" do
+              プライムを始める
+    .header-upper-search
+      %select.header-upper-search-pulldown{name:"posts"}
+        %option{:value => ""} Prime Video
+      %input(type="textarea" class="header-upper-search-form")/
+      %button(type="submit" class="header-upper-search-btn")
+        %i.fas.fa-search
+    .header-upper-user
+      .header-upper-user-country
+        .header-upper-user-country-name
+          JP
+        .header-upper-user-country-choice
+          .header-upper-user-country-choice-icon
+            %i.fas.fa-globe
+          .header-upper-user-country-choice-icon
+            %i.fas.fa-caret-down{style: "color: #AEB0B3"}
+      .header-upper-user-login
+        - if user_signed_in?
+          .header-upper-user-login-username
+            = current_user.name
+            さん
+          = link_to "新規投稿", new_user_session_path, class: "header-upper-user-login--btn"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-upper-user-login--btn"
+        - else
+          .header-upper-user-login-username
+            こんにちは, ログイン
+          = link_to "ログイン", new_user_session_path, class: "header-upper-user-login--btn"
+          = link_to "新規登録", new_user_registration_path, class: "header-upper-user-login--btn"
+      = link_to "", class:"header-upper-user-history" do
+        注文履歴
+      .header-upper-user-paidmember
+        .header-upper-user-paidmember-confirmation
+          今すぐ確認
+        .header-upper-user-paidmember-member
+          プライム
+          %i.fas.fa-caret-down{style: "color: #AEB0B3"}
+      .header-upper-user-cart
+        .header-upper-user-cart-logo
+          %i.fas.fa-shopping-cart
+        .header-upper-user-cart-letter
+          カート
+  .header-lower
+    .header-lower-address
+      .header-lower-address-mark
+        %i.fas.fa-map-marker-alt
+      .header-lower-address-text
+        .header-lower-address-text-user
+          お届け先
+          - if user_signed_in?
+            %span.header-lower-address-text-user-name
+              = current_user.name
+            さん
+        .header-lower-address-text-addressee
+          お届け先を選択
+    %ul.header-lower-lists
+      %li.header-lower-lists__li
+        もう一度買う
+      %li.header-lower-lists__li
+        マイストア
+      %li.header-lower-lists__li
+        タイムセール
+      %li.header-lower-lists__li
+        ギフト券
+      %li.header-lower-lists__li
+        Amazonで売る
+      %li.header-lower-lists__li
+        ヘルプ
+      %li.header-lower-lists__li
+        ドラッグストア
+      %li.header-lower-lists__li
+        本
+      %li.header-lower-lists__li
+        パソコン・周辺機器
+    .header-lower-advertising
+      .header-lower-advertising-image
+        = image_tag "/assets/amazonmusic.png"
+
+    

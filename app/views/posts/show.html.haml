@@ -1,0 +1,131 @@
+.show-upper
+  = render 'showupper'
+  .content-main-titles
+    .content-main-titles-prime
+      prime
+    .content-main-titles-title
+      最近追加された作品
+  = render 'slide'
+  .show-upper-bottom
+
+.show-down
+  .show-down-left
+    .show-down-left-up
+      .show-down-left-up-title
+        カスタマーレビュー
+      .show-down-left-up-box
+        - if @posts.blank?
+          まだ評価をつけられておりません
+        - else
+          .show-down-left-up-box-star
+            %div.rate-average
+              :javascript
+                $('.rate-average').raty({
+                  size: 36,
+                  starOff:  '#{asset_path('star-off.png')}',
+                  starOn : '#{asset_path('star-on.png')}',
+                  starHalf: '#{asset_path('star-half.png')}',
+                  half: true,
+                  readOnly: true,
+                  score: #{Post.average_rate(@posts).round(1)}
+                });
+          .show-down-left-up-box-rate
+            星5つ中の
+            = Post.average_rate(@posts).round(1)
+          .show-down-left-up-box-pull
+            %i.fas.fa-angle-down
+      .show-down-left-up-total
+        評価の数#{@posts.length}
+      .show-down-left-up-rating
+        .show-down-left-up-rating-link
+          星5つ
+        .show-down-left-up-rating-graph
+          .show-down-left-up-rating-graph-length
+        .show-down-left-up-rating-percent
+          11%
+      .show-down-left-up-rating
+        .show-down-left-up-rating-link
+          星4つ
+        .show-down-left-up-rating-graph
+        .show-down-left-up-rating-percent
+          11%
+      .show-down-left-up-rating
+        .show-down-left-up-rating-link
+          星3つ
+        .show-down-left-up-rating-graph
+        .show-down-left-up-rating-percent
+          11%
+      .show-down-left-up-rating
+        .show-down-left-up-rating-link
+          星2つ
+        .show-down-left-up-rating-graph
+        .show-down-left-up-rating-percent
+          11%
+      .show-down-left-up-rating
+        .show-down-left-up-rating-link
+          星1つ
+        .show-down-left-up-rating-graph
+        .show-down-left-up-rating-percent
+          11%
+
+
+    .show-down-left-down
+      .show-down-left-down-title
+        この商品をレビュー
+      .show-down-left-down-sub
+        他のお客様にも意見を伝えましょう
+      %button.show-down-left-down-button
+        = link_to new_post_path(@work.id), class:"show-down-left-down-button-link"do
+          カスタマーレビューを書く
+          
+  .show-down-right
+    .show-down-right-main
+      .show-down-right-main-box
+        - @posts.each do |p|
+          .show-down-right-main-box-name
+            .show-down-right-main-box-name-image
+              = image_tag "/assets/user_image.jpeg", size:"30x30"
+            .show-down-right-main-box-name-name
+              = p.user.name
+          .show-down-right-main-box-titles
+            .show-down-right-main-box-titles-rate
+              -# / 星評価
+              %div{:id => "star-rate-#{p.id}"}
+                :javascript
+                  $('#star-rate-#{p.id}').raty({
+                    size: 36,
+                    starOff:  '#{asset_path('star-off.png')}',
+                    starOn : '#{asset_path('star-on.png')}',
+                    half: true,
+                    readOnly: true,
+                    score: #{p.rate}
+                  });
+                / /星評価
+            .show-down-right-main-box-titles-title
+              = p.title
+          .show-down-right-main-box-create
+            = p.created_at.strftime('%Y年%m月%d日')
+            にレビュー済み
+          .show-down-right-main-box-comment
+            = safe_join(p.content.split("\n"),tag(:br))
+          .show-down-right-main-box-useful
+            #{p.likes.count}人のお客様がこれが役に立ったと考えています
+          .show-down-right-main-box-rate
+            -# %button.show-down-right-main-box-rate-button
+              -# 役に立った
+            - if current_user.already_liked?(p)
+              .show-down-right-main-box-rate-check
+                %i.fas.fa-check{style: "color:green"}
+                フィードバックをお寄せいただきありがとうございます。
+              -# = button_to '役に立ったを取り消す', post_like_path(p.id), method: :delete, class:"show-down-right-main-box-rate-button"
+            - else
+              = button_to '役に立った', post_likes_path(p.id), class:"show-down-right-main-box-rate-button"
+            .show-down-right-main-box-rate-comment
+              コメント
+            .show-down-right-main-box-rate-report
+              違反を報告
+
+
+
+
+

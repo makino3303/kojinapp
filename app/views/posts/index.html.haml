@@ -1,0 +1,37 @@
+.index
+  .slider
+    .slide
+      =link_to post_path(9) do
+        =image_tag "/assets/slide1.jpg"
+    .slide
+      =link_to post_path(4) do
+        =image_tag "/assets/slide2.jpg"
+    .slide
+      =link_to post_path(11) do
+        =image_tag "/assets/slide3.jpg"
+    .slide
+      =link_to post_path(10) do
+        =image_tag "/assets/slide4.jpg"
+
+  .content
+    .content-main
+      .content-main-titles
+        .content-main-titles-prime
+          prime
+        .content-main-titles-title
+          最近追加された作品
+      = render partial: 'slide'
+    .content-main
+      .content-main-titles
+        .content-main-titles-prime
+          prime
+        .content-main-titles-title
+          おすすめ作品
+      = render 'slide'
+    .content-main
+      .content-main-titles
+        .content-main-titles-prime
+          prime
+        .content-main-titles-title
+          最近追加された作品
+      = render 'slide'

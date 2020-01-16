@@ -1,0 +1,38 @@
+-# .comment
+-#   = render 'showupper'
+  / 口コミ入力フォーム
+= form_for @post, url: posts_path, method: :post, html: {class: 'first-main__box'} do |f|
+  / エラーメッセージ
+  -# = render 'layouts/error_messages', model: f.object
+  / 商品コードの送信
+  -# = f.hidden_field :product_id, { value: product.id}
+  / タイトル
+  = f.hidden_field :work_id, :value => @work.id
+  
+  .form-group.row
+    = f.label :title, 'レビュータイトル ', class:'col-md-3 col-form-label'
+    .col-md-9
+      = f.text_field :title, class: "form-control"
+  / 評価
+  #star.form-group.row
+    = f.label :rate,'評価 ', class:'col-md-3 col-form-label'
+    = f.hidden_field :rate, id: :review_star
+  / 評価javascript
+  :javascript
+    $('#star').raty({
+      size     : 36,
+      starOff:  '#{asset_path('star-off.png')}',
+      starOn : '#{asset_path('star-on.png')}',
+      scoreName: 'post[rate]',
+      half: true,
+    });
+  / 本文
+  .form-group.row
+    = f.label :content, 'ここにレビューを記入してください ', class:'col-md-3 col-form-label'
+    .col-md-9
+      = f.text_area :content, class: "form-control", rows: "8"
+  / 投稿ボタン
+  .form-group.row.justify-content-end
+    .col-md-9
+      = f.submit '投稿する', class:"btn btn-success"
+/ /口コミ入力フォーム

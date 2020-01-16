@@ -1,0 +1,61 @@
+.login
+  .login-main
+    = render "devise/shared/header"
+    .login-main-content
+      .login-main-content-submain
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .login-main-content-submain-title
+            ログイン
+          .login-main-content-submain-registration
+            = f.label :email, "Eメールアドレス", class: 'login-main-content-submain-registration-title'
+            %br/
+            = f.email_field :email, class:'login-main-content-submain-registration-form'
+          .login-main-content-submain-registration
+            = f.label :password, "パスワード", class: 'login-main-content-submain-registration-title'
+            = link_to "", class: 'login-main-content-submain-registration-link' do
+              パスワードを忘れた場合
+            %br/
+            = f.password_field :password, class:'login-main-content-submain-registration-form'
+          .login-main-content-submain-create
+            = f.submit "ログイン", class: "login-main-content-submain-create-button"
+          .login-main-content-submain-terms
+            「ログイン」をクリックすることで、 Amazonの
+            = link_to "", class:"login-main-content-submain-terms-link" do
+              利用規約
+            および
+            = link_to "", class:"login-main-content-submain-terms-link" do
+              プライバシー規約
+            に同意するものとみなされます。
+            = link_to "", class:"login-main-content-submain-help" do
+              %i.fas.fa-caret-right{style:"margin-top:4px"}
+              .login-main-content-submain-help-text
+                お困りですか？
+    .login-main-down
+      .login-main-down-question
+        Amazonの新しいお客様ですか？
+      = link_to new_user_registration_path(), class:"login-main-content-submain-terms-link" do
+        %button.login-main-down-button
+          Amazonアカウントを作成
+  = render "devise/shared/footer"
+
+
+
+
+
+-# %h2 Log in
+-# = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   .field
+-#     = f.label :password
+-#     %br/
+-#     = f.password_field :password, autocomplete: "current-password"
+-#   - if devise_mapping.rememberable?
+-#     .field
+-#       = f.check_box :remember_me
+-#       = f.label :remember_me
+-#   .actions
+-#     = f.submit "Log in"
+-# = render "devise/shared/links"

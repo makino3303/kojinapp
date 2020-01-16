@@ -1,0 +1,23 @@
+.new-main-header{
+  height: 50px;
+  margin: 0 auto;
+  &-link{
+    text-decoration: none;
+    color: black;
+    &-title{
+      display: flex;
+      margin: 0 120px;
+      &-amazon{
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 50px;
+      }
+      &-domain{
+        font-size: 8px;
+        text-align: center;
+        line-height: 60px;
+      }
+    }
+  }
+}

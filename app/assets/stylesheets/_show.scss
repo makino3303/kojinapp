@@ -1,0 +1,206 @@
+.show-upper{
+  background-color: #0C171C;
+  &-details{
+    margin: 0 auto 30px;
+    width: 1300px;
+    padding-top: 50px;
+    display: flex;
+    &-left{
+      width: 800px;
+      &-title{
+        font-size: 36px;
+        color: #ffffff;
+      }
+      &-evaluation{
+        margin-top: 20px;
+        color: #8197A4;
+        display: flex;
+        &-length{
+          margin-left: 5px;
+          color: #79B8F3;
+        }
+        &-release{
+          margin-left: 10px;
+        }
+      }
+      &-text{
+        margin-top: 20px;
+        color: #ffffff;
+      }
+      &-starring{
+        margin-top: 20px;
+        color: #8197A4;
+        display: flex;
+        &-name{
+          margin-left: 20px;
+          text-decoration: none;
+          color: #79B8F3;
+        }
+      }
+    }
+    &-right{
+      margin: auto 0 auto auto;
+    }
+  }
+  &-bottom{
+    padding-bottom: 50px;
+  }
+}
+
+.show-down{
+  background-color: #ffffff;
+  padding-top: 30px;
+  display: flex;
+  &-left{
+    margin-left: 50px;
+    width: 300px;
+    &-up{
+      height: 230px;
+      border-bottom: solid 1px $gray;
+      &-title{
+        font-size: 24px;
+        font-weight: bold;
+      }
+      &-box{
+        display: flex;
+        &-star{
+          font-size: 16px;
+        }
+        &-rate{
+          margin-left: 10px;
+          color: #101010;
+          font-size: 16px;
+        }
+        &-pull{
+          font-size: 13px;
+          margin: 3px 5px 0;
+          color: #666666;
+        }
+      }
+      &-total{
+        font-size: 12px;
+        color: #555555;
+        margin: 10px 0 15px;
+      }
+      &-rating{
+        margin-top: 3px;
+        height: 20px;
+        width: 275px;
+        display: flex;
+        &-link{
+          font-size: 12px;
+          color: $blue;
+          text-decoration: none;
+        }
+        &-graph{
+          margin-left: 10px;
+          width: 185px;
+          background-color: #F3F3F3;
+          border: solid 1px #9F9F9F;
+          &-length{
+            background: linear-gradient(to bottom,#FFD960,#FFAB03);
+            width: 80%;
+            height: 18px;
+            border-right: solid 1px #BF920A;
+          }
+        }
+        &-percent{
+          margin-left: 10px;
+          font-size: 12px;
+          color: $blue;
+        }
+      }
+    }
+    &-down{
+      padding-top: 20px;
+      height: 120px;
+      border-bottom: solid 1px $gray;
+      &-title{
+        font-size: 18px;
+        font-weight: bold;
+      }
+      &-sub{
+        color: #555555;
+        font-size: 13px;
+      }
+      &-button{
+        border-color: #ADB1B8 #A2A6AC #8D9096;
+        font-size: 13px;
+        padding: 3px 0;
+        margin-top: 20px;
+        width: 300px;
+        background-color: #EEEFF1;
+        &-link{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+  }
+  &-right{
+    width: 800px;
+    &-main{
+      width: 600px;
+      margin: 0 auto;
+      &-box{
+        &-name{
+          display: flex;
+          &-image{
+            height: 30px;
+            width: 30px;
+          }
+          &-name{
+            margin-left: 10px;
+            font-size: 13px;
+            line-height: 30px;
+          }
+        }
+        &-titles{
+          display: flex;
+          margin-top: 10px;
+          &-rate{
+
+          }
+          &-title{
+            margin-left: 10px;
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+        &-create{
+          font-size: 14px;
+        }
+        &-comment{
+          margin: 20px 0;
+          font-size: 13px;
+          color: #393939;
+        }
+        &-useful{
+          font-size: 13px;
+          color: #B6B6B6;
+        }
+        &-rate{
+          color: #8A8A8A;
+          font-size: 13px;
+          margin: 20px 0;
+          display: flex;
+          &-check{
+            color: green;
+          }
+          &-button{
+            background-color: #ECEDF0;
+            padding: 0 10px;
+            font-size: 13px;
+          }
+          &-comment{
+            margin: 0 20px;
+            padding: 0 10px;
+            border-left: solid 1px #B6B6B6;
+            border-right: solid 1px #B6B6B6;
+          }
+        }
+      }
+    }
+  }
+}

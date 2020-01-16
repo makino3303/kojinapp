@@ -1,0 +1,28 @@
+.new-footer{
+  margin-top: 20px;
+  &-down{
+    background: linear-gradient(transparent, $gray 10%, #ffffff 90%, transparent);
+    &-bottom{
+      height: 100px;
+      margin: 0 auto;
+      width: 280px;
+      &-links{
+        display: flex;
+        padding-top: 20px;
+        font-size: 12px;
+        &-link{
+          margin: 0 auto;
+          &-text{
+            color: $blue;
+            text-decoration: none;
+          }
+        }
+      }
+      &-company{
+        text-align: center;
+        font-size: 8px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

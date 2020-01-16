@@ -1,0 +1,7 @@
+= form_for @works, url: works_path, method: :post, html: {class: 'works'} do |f|
+  = f.text_field :title
+  = f.text_field :content
+  = f.number_field :release
+  = f.text_field :starring
+  = f.file_field :image
+  = f.submit '投稿する'

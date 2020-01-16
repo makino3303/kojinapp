@@ -1,0 +1,32 @@
+.show-upper-details
+  .show-upper-details-left
+    .show-upper-details-left-title
+      = @work.title
+    .show-upper-details-left-evaluation
+      - if @posts.blank?
+        まだ評価をつけられておりません
+      - else
+        %div.rate-average
+          :javascript
+            $(".rate-average").raty({
+              size: 36,
+              starOff:  '#{asset_path('star-off.png')}',
+              starOn : '#{asset_path('star-on.png')}',
+              starHalf: '#{asset_path('star-half.png')}',
+              half: true,
+              readOnly: true,
+              score: #{Post.average_rate(@posts).round(1)}
+            });
+        .show-upper-details-left-evaluation-length
+          = "(#{@posts.length})"
+        .show-upper-details-left-evaluation-release
+          = "#{@work.release}年"
+    .show-upper-details-left-text
+      = @work.content
+    .show-upper-details-left-starring
+      .show-upper-details-left-starring-title
+        主演
+      = link_to "", class:"show-upper-details-left-starring-name" do
+        = @work.starring
+  .show-upper-details-right
+    = image_tag @work.image.url, size:"335x215"
