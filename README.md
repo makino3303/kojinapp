@@ -29,17 +29,38 @@ Overview
 <img width="1440" alt="new_image1" src="https://user-images.githubusercontent.com/56908961/72587864-e4a29200-3939-11ea-8f67-8cee7c08435f.png">
 
 
-## VS. 
-
-## Requirement
+## Model
+<!-- 競合との比較 -->
+モデルとなったサイトのURL  
+https://www.amazon.co.jp/Prime-Video/b?ie=UTF8&node=3535604051
 
 ## Usage
+<!-- 使用方法 -->
+<レビューを記入する場合>  
+新規登録からユーザー登録し、レビューしたい作品を選びクリック。  
+(ユーザー登録しないとレビューの投稿はできませんが今までのレビューは見る事ができます)  
+カスタマーレビューを書くをクリック。  
+レビューのタイトル、評価を五段階で選択、レビューの内容を記載後投稿するをクリック。
+
+<今までのレビューを見たい場合>  
+レビューを見たい作品をクリック。  
+(ユーザー登録は不要です)  
+作品紹介の下に、レビューを確認する事ができます。  
 
 ## Install
+<!-- 最速でインストールする方法の記載 -->
+https://github.com/makino3303/kojinapp  
+こちらにアクセスし、ダウンロード  
+ターミナルでリポジトリをrails db:migrate後、rails db:seedを実行し、rails sを実行してください。
 
 ## Contribution
-
-## Licence
-
-## Author
+<!-- forkの方法を記載 -->
+https://github.com/makino3303/kojinapp  
+こちらにアクセスし、フォークをクリック  
+ターミナルから  
+git clone git@github.com:[Githubのユーザー名]/kojinapp.git  
+と、入力  
+ターミナルでマイグレートを実行したのち、rails db:seedを実行後、rails sを実行してください。  
+ブランチを作成し変更後、コミットしプッシュ  
+プルリクエストを作成してください。
 
