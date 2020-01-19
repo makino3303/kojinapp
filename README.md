@@ -31,7 +31,7 @@ Overview
 
 ## Model
 <!-- 競合との比較 -->
-モデルとなったサイトのURL
+モデルとなったサイトのURL  
 https://www.amazon.co.jp/Prime-Video/b?ie=UTF8&node=3535604051
 
 ## Usage
@@ -50,7 +50,8 @@ https://www.amazon.co.jp/Prime-Video/b?ie=UTF8&node=3535604051
 ## Install
 <!-- 最速でインストールする方法の記載 -->
 https://github.com/makino3303/kojinapp  
-こちらにアクセスし、ダウンロード
+こちらにアクセスし、ダウンロード  
+ターミナルでリポジトリをrails db:migrate後、rails db:seedを実行し、rails sを実行してください。
 
 ## Contribution
 <!-- forkの方法を記載 -->
@@ -59,6 +60,7 @@ https://github.com/makino3303/kojinapp
 ターミナルから  
 git clone git@github.com:[Githubのユーザー名]/kojinapp.git  
 と、入力  
+ターミナルでマイグレートを実行したのち、rails db:seedを実行後、rails sを実行してください。  
 ブランチを作成し変更後、コミットしプッシュ  
 プルリクエストを作成してください。
 
