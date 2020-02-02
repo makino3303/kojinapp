@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %link{href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet"}/
+    %link{:href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.scss", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Kojinapp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "/js/jquery.min.js"}
+    %script{:src => "/js/jquery.raty.js"}
+    %script{:src => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", :type => "text/javascript"}
+  %body
+    .port
+      .port-up
+        .port-up-main
+          .port-up-main-title
+            %i.fas.fa-desktop.port-up-main-title-logo1
+            %p.port-up-main-title-name ポートフォリオ作ってみた
+            .port-up-main-title-links
+              = link_to "", class:'port-up-main-title-links-twitter' do
+                %i.fab.fa-twitter-square
+              = link_to "", class:'port-up-main-title-links-line' do
+                %i.fab.fa-line
+              = link_to "", class:'port-up-main-title-links-facebook' do
+                %i.fab.fa-facebook-square
+          %ul.port-up-main-lists
+            %li.port-up-main-lists__li 
+              = link_to "", class: "port-up-main-lists__li__link" do
+                About
+                %i.fas.fa-chevron-down
+            %li.port-up-main-lists__li
+              = link_to "", class:"port-up-main-lists__li__link" do
+                Works
+                %i.fas.fa-chevron-down
+            %li.port-up-main-lists__li
+              = link_to "", class:"port-up-main-lists__li__link" do
+                Blog
+                %i.fas.fa-chevron-down
+            %li.port-up-main-lists__li 
+              = link_to "", class:"port-up-main-lists__li__link" do
+                Contact
+                %i.fas.fa-chevron-down
+      .port-down
+        .port-down-main
