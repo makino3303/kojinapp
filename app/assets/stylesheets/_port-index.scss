@@ -1,6 +1,13 @@
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: blue;
+  border-bottom: solid 1px blue;
+}
 .port{
-  height: 100vh;
   width: 100vw;
+  background: linear-gradient(gray, white, gray);
   &-up{
     height: 200px;
     &-main{
@@ -65,13 +72,109 @@
     }
   }
   &-down{
-    height: calc(100vh - 200px);
-    background-color: blue;
     &-main{
       margin: 0 auto;
-      background-color: purple;
+      background-color: white;
       width: 1000px;
-      height: calc(100vh - 200px);
+      &-title{
+        height: 100px;
+        background: linear-gradient(yellow, orange);
+        &-about{
+          margin-left: 30px;
+          line-height: 100px;
+          font-size: 36px;
+        }
+      }
+      &-text{
+        padding: 50px 0;
+        background: linear-gradient(rgb(255, 217, 0), rgb(255, 145, 0));
+        &-details{
+          margin-left: 10px;
+        }
+      }
+      &-block{
+        padding-top: 75px;
+        display: flex;
+        height: 200px;
+        background-color: white;
+        &-image{
+          width: 30%;
+          background-color: white;
+          &-block{
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+          }
+        }
+        &-introduction{
+          width: 15%;
+          &-block{
+            margin-left: 30px;
+            &-list{
+              margin-top: 5px;
+              font-size: 14px;
+              font-weight: bold;
+              color: #333333;
+            }
+          }
+        }
+        &-answer{
+          width: 55%;
+          &-block{
+            margin-left: 20px;
+            &-list{
+              margin-top: 5px;
+              font-size: 14px;
+              color: #333333;
+            }
+          }
+        }
+      }
+      &-title2{
+        height: 100px;
+        background: linear-gradient(orange, rgb(255, 72, 0));
+        &-works{
+          margin-left: 30px;
+          line-height: 100px;
+          font-size: 36px;
+        }
+      }
+      &-text2{
+        margin-top: 100px;
+        height: 200px;
+        display: flex;
+        &-image{
+          width: 30%;
+          &-block{
+            padding-left: 10px;
+          }
+        }
+        &-introduction{
+          width: 15%;
+          &-block{
+            margin-left: 30px;
+            &-list{
+              margin-top: 5px;
+              font-weight: bold;
+              font-size: 14px;
+              color: #333333;
+            }
+          }
+        }
+        &-answer{
+          width: 55%;
+          padding-right: 10px;
+          &-block{
+            margin-left: 20px;
+            &-list{
+              margin-top: 5px;
+              font-size: 14px;
+              color: #333333;
+            }
+          }
+        }
+      }
     }
   }
 }
+

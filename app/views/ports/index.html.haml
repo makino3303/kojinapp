@@ -46,3 +46,86 @@
                 %i.fas.fa-chevron-down
       .port-down
         .port-down-main
+          .port-down-main-title
+            .port-down-main-title-about About
+          .port-down-main-block
+            .port-down-main-block-image
+              .port-down-main-block-image-block
+                = image_tag '/assets/my_image.jpg', size:'150x150'
+            .port-down-main-block-introduction
+              .port-down-main-block-introduction-block
+                .port-down-main-block-introduction-block-list
+                  名前
+                .port-down-main-block-introduction-block-list
+                  所在地
+                .port-down-main-block-introduction-block-list
+                  生年月日
+                .port-down-main-block-introduction-block-list
+                  趣味
+                .port-down-main-block-introduction-block-list
+                  お問い合わせ
+                  
+            .port-down-main-block-answer
+              .port-down-main-block-answer-block
+                .port-down-main-block-answer-block-list
+                  牧野 秀平
+                .port-down-main-block-answer-block-list
+                  東京都内
+                .port-down-main-block-answer-block-list
+                  1989年8月生まれ 北海道釧路市出身
+                .port-down-main-block-answer-block-list
+                  【カラオケ】【ボウリング】【ジョギング】
+                .port-down-main-block-answer-block-list
+                  makino3303@icloud.com
+          .port-down-main-title2
+            .port-down-main-title2-works Works
+          .port-down-main-text2
+            = link_to posts_path() do
+              .port-down-main-text2-image
+                .port-down-main-text2-image-block
+                  = image_tag "/assets/work1.png", size:"300x200"
+            .port-down-main-text2-introduction
+              .port-down-main-text2-introduction-block
+                .port-down-main-text2-introduction-block-list
+                  作品名
+                .port-down-main-text2-introduction-block-list
+                  作成時間
+                .port-down-main-text2-introduction-block-list
+                  目的
+                .port-down-main-text2-introduction-block-list
+                  苦労した点
+            .port-down-main-text2-answer
+              .port-down-main-text2-answer-block
+                = link_to posts_path(), class:"port-down-main-text2-answer-block-list", id:"link" do
+                  Amazon prime videoのクローンサイト
+                .port-down-main-text2-answer-block-list
+                  約３週間
+                .port-down-main-text2-answer-block-list
+                  TECH教室にて個人アプリ作成の時間に作成
+                .port-down-main-text2-answer-block-list
+                  jsを使用したスライドの実装やレビューの評価をつける星の実装、アベレージ計算し表示するところは特に苦労し時間がかかってしまったが、実装できてjsをもっと知りたいというきっかけになった。
+          .port-down-main-text2
+            .port-down-main-text2-image
+              .port-down-main-text2-image-block
+                = image_tag "/assets/work2.png", size:"300x200"
+            .port-down-main-text2-introduction
+              .port-down-main-text2-introduction-block
+                .port-down-main-text2-introduction-block-list
+                  作品名
+                .port-down-main-text2-introduction-block-list
+                  作成時間
+                .port-down-main-text2-introduction-block-list
+                  目的
+                .port-down-main-text2-introduction-block-list
+                  苦労した点
+            .port-down-main-text2-answer
+              .port-down-main-text2-answer-block
+                =link_to "http://52.68.142.23/", class:"port-down-main-text2-answer-block-list" do
+                  メルカリのクローンサイト
+                .port-down-main-text2-answer-block-list
+                  約１ヶ月
+                .port-down-main-text2-answer-block-list
+                  TECH教室にてチーム開発として作成
+                .port-down-main-text2-answer-block-list
+                  ユーザー登録を任せてもらい、ウィザード形式でのユーザー登録の実装や各項目にバリデーションの設定およびエラーメッセージの表示に苦戦しましたが、なんとか実装することができました。
+                  
