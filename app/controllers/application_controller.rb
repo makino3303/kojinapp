@@ -22,6 +22,16 @@ class ApplicationController < ActionController::Base
         "application"
       end
     end
+
+
+    def after_sign_in_path_for(resource)
+      posts_path # ログイン後に遷移するpathを設定
+    end
+
+    def after_sign_out_path_for(resource)
+      posts_path # ログアウト後に遷移するpathを設定
+    end
+
   
     def configure_permitted_parameters
       added_attrs = [ :name, :kana, :email, :password, :password_confirmation　]
