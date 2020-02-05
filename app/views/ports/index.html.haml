@@ -38,7 +38,7 @@
                 %i.fas.fa-chevron-down
             %li.port-up-main-lists__li
               = link_to "", class:"port-up-main-lists__li__link" do
-                Blog
+                Service
                 %i.fas.fa-chevron-down
             %li.port-up-main-lists__li 
               = link_to "", class:"port-up-main-lists__li__link" do
@@ -64,7 +64,6 @@
                   趣味
                 .port-down-main-block-introduction-block-list
                   お問い合わせ
-                  
             .port-down-main-block-answer
               .port-down-main-block-answer-block
                 .port-down-main-block-answer-block-list
@@ -96,7 +95,7 @@
                   苦労した点
             .port-down-main-text2-answer
               .port-down-main-text2-answer-block
-                = link_to posts_path(), class:"port-down-main-text2-answer-block-list", id:"link" do
+                = link_to posts_path(), class:"port-down-main-text2-answer-block-link" do
                   Amazon prime videoのクローンサイト
                 .port-down-main-text2-answer-block-list
                   約３週間
@@ -120,7 +119,7 @@
                   苦労した点
             .port-down-main-text2-answer
               .port-down-main-text2-answer-block
-                =link_to "http://52.68.142.23/", class:"port-down-main-text2-answer-block-list" do
+                =link_to "http://52.68.142.23/", class:"port-down-main-text2-answer-block-link" do
                   メルカリのクローンサイト
                 .port-down-main-text2-answer-block-list
                   約１ヶ月
@@ -128,4 +127,51 @@
                   TECH教室にてチーム開発として作成
                 .port-down-main-text2-answer-block-list
                   ユーザー登録を任せてもらい、ウィザード形式でのユーザー登録の実装や各項目にバリデーションの設定およびエラーメッセージの表示に苦戦しましたが、なんとか実装することができました。
-                  
+          .port-down-main-title3
+            .port-down-main-title3-service service
+          .port-down-main-subtitles
+            .port-down-main-subtitles-block
+              .port-down-main-subtitles-block-title ディレクション
+              .port-down-main-subtitles-block-subtitle DIRECTION
+              .port-down-main-subtitles-block-icon
+                %i.fas.fa-edit
+              .port-down-main-subtitles-block-text お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+            .port-down-main-subtitles-block
+              .port-down-main-subtitles-block-title ディレクション
+              .port-down-main-subtitles-block-subtitle DIRECTION
+              .port-down-main-subtitles-block-icon
+                %i.fas.fa-edit
+              .port-down-main-subtitles-block-text お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+            .port-down-main-subtitles-block
+              .port-down-main-subtitles-block-title ディレクション
+              .port-down-main-subtitles-block-subtitle DIRECTION
+              .port-down-main-subtitles-block-icon
+                %i.fas.fa-edit
+              .port-down-main-subtitles-block-text お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+          .port-down-main-title4
+            .port-down-main-title4-Contact Contact
+          .port-down-main-text4
+            .port-down-main-text4-block 
+              制作の依頼・ご相談などお気軽にお問い合わせくださいませ。
+              %br/
+              下記フォームよりわかる範囲でご記入ください。
+              = form_for @messages, url: ports_path, method: :post  do |f|
+                .port-down-main-text4-name お名前
+                = f.text_field :name, class:'port-down-main-text4-field', placeholder: "例：山田 太郎"
+                .port-down-main-text4-email メールアドレス
+                = f.email_field :email, class:'port-down-main-text4-field', placeholder: "例：PC・携帯どちらでも可"
+                .port-down-main-text4-phone お電話番号
+                = f.phone_field :phone_number, class:'port-down-main-text4-field', placeholder: "例：090XXXXXXXX"
+                .port-down-main-text4-text お問い合わせ内容
+                = f.text_area :text, class:'port-down-main-text4-textfield', placeholder: "例：本文をこちらにどうぞ"
+                .port-down-main-text4-submit
+                  = f.submit "送信する", class:'port-down-main-text4-button'
+          .port-down-footer
+            .port-down-footer-block 
+              .port-down-footer-block-about About
+              .port-down-footer-block-works Works
+              .port-down-footer-block-service Service
+              .port-down-footer-block-contact Contact
+
+
+

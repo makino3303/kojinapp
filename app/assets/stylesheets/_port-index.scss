@@ -1,10 +1,3 @@
-a{
-  text-decoration: none;
-}
-a:hover{
-  color: blue;
-  border-bottom: solid 1px blue;
-}
 .port{
   width: 100vw;
   background: linear-gradient(gray, white, gray);
@@ -66,6 +59,9 @@ a:hover{
             text-decoration: none;
             color: blue;
             line-height: 30px;
+            &:hover{
+              border-bottom: solid 1px blue;
+            }
           }
         }
       }
@@ -171,7 +167,121 @@ a:hover{
               font-size: 14px;
               color: #333333;
             }
+            &-link{
+              text-decoration: none;
+              margin-top: 5px;
+              font-size: 14px;
+              color: #333333;
+              &:hover{
+                border-bottom: blue 1px solid;
+                color: blue;
+                transition: 1;
+              }
+            }
           }
+        }
+      }
+      &-title3{
+        margin-top: 100px;
+        height: 100px;
+        background: linear-gradient(rgb(255, 72, 0), red);
+        &-service{
+          margin-left: 30px;
+          line-height: 100px;
+          font-size: 36px;
+        }
+      }
+      &-subtitles{
+        display: flex;
+        &-block{
+          margin-top: 50px;
+          width: 33.3%;
+          &-title{
+            text-align: center;
+            font-size: 24px;
+            color: #333333;
+          }
+          &-subtitle{
+            text-align: center;
+            color: #636161;
+
+          }
+          &-icon{
+            margin-top: 50px;
+            font-size: 108px;
+            text-align: center;
+            color: #333333;
+          }
+          &-text{
+            margin-top: 30px;
+            padding: 0 10px;
+          }
+        }
+      }
+      &-title4{
+        margin-top: 100px;
+        height: 100px;
+        background: linear-gradient(red, rgb(255, 0, 55));
+        &-Contact{
+          margin-left: 30px;
+          line-height: 100px;
+          font-size: 36px;
+        }
+      }
+      &-text4{
+        &-block{
+          padding: 80px 30px 0;
+          color: #333333;
+          font-size: 16px;
+        }
+        &-name{
+          margin: 80px 0 5px;
+        }
+        &-field{
+          width: 400px;
+          padding: 0 5px;
+        }
+        &-email,&-phone,&-text{
+          margin-top: 30px;
+        }
+        &-textfield{
+          height: 200px;
+          width: 400px;
+          padding: 5px;
+          resize: none;
+        }
+        &-submit{
+          margin-top: 20px;
+          height: 75px;
+          width: 100px;
+        }
+        &-button{
+          display: inline-block;
+          border-radius: 5px;
+          background: linear-gradient(rgb(158, 156, 156), rgb(100, 100, 100));
+          padding: 10px;
+          text-align: center;
+          color: white;
+          width: 80px;
+          height: 38px;
+          width: 100px;
+        }
+      }
+    }
+    &-footer{
+      height: 50px;
+      &-block{
+        display: flex;
+        height: 20px;
+        padding: 15px 30px;
+        &-about{
+          font-size: 13px;
+          color: #333333;
+        }
+        &-works, &-service, &-contact{
+          margin-left: 50px;
+          font-size: 13px;
+          color: #333333;
         }
       }
     }
