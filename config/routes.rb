@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root "ports#index"
+  root "tops#index"
 
   resources :ports do
   end
@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   end
 
   resources :works do
+  end
+
+  resources :top do
   end
 end

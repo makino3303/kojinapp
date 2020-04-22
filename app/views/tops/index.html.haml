@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %link{href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet"}/
+    %link{:href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.scss", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Kojinapp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "/js/jquery.min.js"}
+    %script{:src => "/js/jquery.raty.js"}
+    %script{:src => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", :type => "text/javascript"}
+  %body
+    .wall
+      %a.top-link{href: "http://52.68.142.23/"}
+        .top-link-1
+          %span.top1
+          %span.right1
+          .top-text mercari clone site
+          %span.bottom1
+          %span.left1
+      %a.work-link{href: "/posts"}
+        .work-link-1
+          %span.top2
+          %span.right2
+          .work-text Amazon prime video clone
+          %span.bottom2
+          %span.left2
+      %a.port-link{href: "/ports"}
+        .port-link-1
+          %span.top3
+          %span.right3
+          .port-text Portfolio
+          %span.bottom3
+          %span.left3
